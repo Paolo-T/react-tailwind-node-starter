@@ -11,7 +11,10 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:style": "tailwind build src/css/tailwind.css -o src/css/styles.css",
+    "start": "npm run build:style && react-scripts start",
+    "build:css": "tailwind build src/css/styles.css -o public/css/styles.css",
+    "watch:css": "tailwind build src/css/styles.css -o public/css/styles.css -W",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
   }
 }
