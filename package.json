@@ -13,8 +13,8 @@
   "scripts": {
     "apistart": "node index",
     "dev": "nodemon index",
-    "start": "npm run build:css && react-scripts start --",
-    "build:css": "postcss src/css/styles.css -o public/css/styles.css -W",
+    "build:style":"postcss src/css/tailwind.css -o src/css/styles.css",
+    "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
