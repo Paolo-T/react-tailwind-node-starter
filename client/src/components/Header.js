@@ -9,11 +9,8 @@ function Header() {
 
             <div className="inline-block w-2/3 ">
                 <h1 className="text-7xl font-semibold leading-none my-10">
-                    Your title
+                    My title
                 </h1>
-                <h3 className="text-2xl font-light leading-snug mb-8">
-                    your subtitle
-                </h3>
             </div>
         </header>
     );

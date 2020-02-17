@@ -41,32 +41,18 @@ class Image extends Component {
     }
     render() {
         const { error, isLoaded, imageData } = this.state;
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return (
-                <div className="container mx-auto">
-                    <h3>Loading...</h3>
+
+        return (
+            <div className="container mx-auto">
+                <div className="">
+                    <h2 className="text-4xl mb-6">{imageData.title}</h2>
+                    <img src={imageData.url} alt="Some thing" />
+                    <p className="text-2xl mt-10 font-light w-3/4">
+                        {imageData.explanation}
+                    </p>
                 </div>
-            );
-        } else {
-            return (
-                <div className="container mx-auto">
-                    <div className="">
-                        <h1 className="text-6xl font-semibold leading-none">
-                            Photo of the day
-                        </h1>
-                        <h3>{imageData.title}</h3>
-                        <img
-                            className="rounded-lg"
-                            src={imageData.hdurl}
-                            alt="Some thing"
-                        />
-                        <p>{imageData.explanation}</p>
-                    </div>
-                </div>
-            );
-        }
+            </div>
+        );
     }
 }
 export default Image;
